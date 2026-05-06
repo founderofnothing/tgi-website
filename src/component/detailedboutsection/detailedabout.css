@@ -1,0 +1,229 @@
+.DetailedAbout_container{
+    width:98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.DetailedAbout_container_header{
+    font-family: poppins;
+    font-weight:600;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.DetailedAbout_text_field{
+    font-family: poppins;
+}
+
+.DetailedAbout_text_field{
+ font-size: 20px;
+}
+
+
+
+.DetailedAbout_managment_person_container{
+    display: flex;
+    margin-top:160px;
+    /* background: yellow; */
+   
+}
+
+.DetailedAbout_mng_cards{
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction:column;
+    gap:20px;
+
+    
+}
+
+
+.lhs_DetailedAbout_mng_field{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    column-gap: 40px;
+    justify-content: space-around;
+}
+
+.lhs_detailedabout_img_wrapper{
+    width:90px;
+    height:90px;
+    background:rgb(197, 197, 197);
+    border-radius: 50px;
+}
+
+
+
+.DetailedAbout_mng_card{
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content: space-between;
+    background:white;
+    box-shadow: 0 3px 10px rgba(236, 236, 236, 0.829);
+    padding-left:10px;
+    padding-right: 10px;
+    border-radius: 12px;
+}
+
+
+.mid_detailAbout_title_text{
+    font-family: poppins;
+    font-weight:600;
+    font-size:18px;
+}
+
+.mid_detailAbout_title_para{
+    font-family: poppins;
+    font-weight:500;
+    font-size: 14px;
+    color:#454545;
+}
+
+
+
+
+
+
+
+
+/* Parent must be relative */
+.DetailedAbout_mng_card {
+    position: relative;
+    overflow: visible;
+  }
+  
+  /* Hover card hidden by default */
+  .hover_card {
+    position: absolute;
+    top: -50px; /* adjust position */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width:40%;
+    background: #fff;
+    color: #333;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+  
+  /* Show on hover */
+  .DetailedAbout_mng_card:hover .hover_card {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+.detailedabout_hover_textfield{
+    font-family: poppins;
+    font-size:15px;
+}
+
+
+/* img field  */
+
+.lhs_detail_aboutsection_img_field{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position:top;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .DetailedAbout_container{
+        width:98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .DetailedAbout_managment_person_container{
+        width:98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .DetailedAbout_mng_cards{
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .DetailedAbout_text_field{
+        font-size: 18px;
+        margin-bottom:30px;
+    }
+
+    .DetailedAbout_mng_card{
+        padding: 0px;
+    }
+
+   
+}
+
+@media(max-width:460px){
+.mid_detailAbout_title_text{
+    font-size: 16px;
+    margin-bottom:5px;
+}
+
+.mid_detailAbout_title_para{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.lhs_detailedabout_img_wrapper{
+    width:70px;
+    height:70px;
+}
+
+}
+
+@media(max-width:406px){
+    .mid_detailAbout_title_text{
+        font-size: 16px;
+        margin-bottom:5px;
+    }
+    
+    .mid_detailAbout_title_para{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    
+    .lhs_detailedabout_img_wrapper{
+        width:55px;
+        height:55px;
+    }
+    
+   .lhs_DetailedAbout_mng_field{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width:100%;
+    text-align: center;
+
+   }
+    
+    }
+
