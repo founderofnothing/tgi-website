@@ -1,167 +1,155 @@
 .footer_container{
     width:97%;
-    padding: 20px ;
-    display:flex;
-    flex-direction:column;
-    margin-top: 120px;
-    background: #141414;
-    color:#e4e4e4;
     margin-left: auto;
-    margin-right: auto;
-}
-
-.hig_ftr_wrapper{
-display: flex;
-width:95%;
-justify-content: space-around;
-margin-left: auto;
-
-margin-right: auto;
-}
-
-/* .lhs_footer_wrapper{
-    width:35%;
-} */
-
-.ftr_int_title{
-    font-family: poppins;
-    font-weight:500;
-    font-size:28px;
-}
-
-.lhs_ftr_address_wrapper{
-    display: flex;
-    /* align-items: center; */
-    column-gap: 20px;
-    /* width:70%; */
-    /* margin-left: auto; */
-    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding: 20px;
+    background: #000;
+    color: white;
+    margin-top: 80px;
+    padding-top:60px;
 }
 
 .ftr_icons{
-    width:25px;
-    height:25px;
+    width:20px;
+    height:20px;
 }
 
-.lhs_ftr_address_text{
+.hig_ftr_wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.ftr_int_title{
     font-family: poppins;
-    font-weight: 400;
-    font-size:15px;
-    margin-top: 0px;
-
-
+    font-weight: 500;
+    font-size: 22px;
 }
 
+.lhs_footer_wrapper{
+ margin-right:20px;
+}
 
-.lhs_gmail_wrapper{
-    display:flex;
+.lhs_ftr_address_wrapper,.lhs_gmail_wrapper{
+    display: flex;
     align-items: center;
-    column-gap: 20px;
+    column-gap:30px;
+    
 }
 
-.lhs_ftr_mail_address_text{
+
+
+.lhs_ftr_address_text,.lhs_ftr_mail_address_text,.fnl_ftr_text_field,.mid_ftr_text_field{
     font-family: poppins;
     font-weight: 400;
-    font-size:15px;
+    font-size:16px;
+    color:#c0c0c0;
+    text-wrap: wrap;
 }
 
-/* .mid_footer_wrapper,.fnl_footer_wrapper{
-    width:33%;
-} */
 
 .mid_ftr_header_text_field,.fnl_ftr_header_text_field{
-    text-align: center;
     font-family: poppins;
-    font-weight: 400;
-    font-size:22px;
+    font-weight: 500;
+    font-size: 22px;
 }
 
-.mid_ftr_text_field,.fnl_ftr_text_field{
-    font-family: poppins;
-    font-weight:400;
-    font-size: 14px;
-    text-align: center;
-    color:#afafaf;
-
-}
-
-.ftr_btm_icons{
-    width:20px;
-    height: 20px;
-}
 
 .btm_ftr_wrapper{
     display: flex;
+    flex-direction:row;
     align-items: center;
     justify-content: space-between;
-    margin-top:40px;
 }
 
 .lhs_btm_ftr_wrapper{
     display: flex;
     align-items: center;
-    column-gap:25px;
+    column-gap:20px;
+}
+
+.ftr_btm_icons{
+    width:25px;
+    height:25px;
 }
 
 .lhs_btm_ftr_text{
-    font-family: poppins;
-    font-weight:400;
-    font-size: 14px;
+    font-size:14px;
+    font-weight: 400;
+    color:#c0c0c0;
+    font-family:poppins;
 }
 
 .social_media_link_wrapper{
-display: flex;
-align-items: center;
-column-gap: 20px;
+    display: flex;
+    align-items: center;
+    column-gap:10px;
 }
 
-@media(max-width:884px){
-    .hig_ftr_wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        width:98%;
-        column-gap: 30px;
-        gap: 30px;
-    }
+.btm_ftr_wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom:40px;
 
-    .lhs_ftr_address_wrapper{
-        display: flex;
-        column-gap: 20px;
-        /* width:50%; */
-        /* margin-left: auto; */
-        margin-right: auto;
-    }
 }
 
-@media(max-width:624px){
+@media(max-width:778px){
 
     .footer_container{
         padding:0px;
         width:100%;
+        justify-content: center;
     }
 
+.lhs_ftr_address_wrapper,.lhs_gmail_wrapper{
+    column-gap:20px;
+}
+
+   .lhs_ftr_address_text,.mid_ftr_text_field,.fnl_ftr_text_field{
+
+    font-size: 14px;
+
+   }
+
+.lhs_btm_ftr_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+   .btm_ftr_wrapper{
+    display: flex;
+    flex-direction:column;
+    /* flex-wrap:wrap; */
+   }
+.social_media_link_wrapper{
+    margin-top:30px;
+    width:98%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+}
+
+
+@media(max-width:544px){
+
     .lhs_footer_wrapper{
-        width:90%;
+        margin-right: 0px;
     }
+
 
     .lhs_ftr_address_wrapper,.lhs_gmail_wrapper{
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
+
         
     }
 
-
-    .btm_ftr_wrapper{
-        display: flex;
-        flex-direction:column;
-        gap: 20px;
-    }
-    .social_media_link_wrapper{
-        display: flex;
-        column-gap: 40px;
-    }
-
-    .ftr_int_title{
-        font-size:22px;
+    .ftr_icons,.ftr_btm_icons{
+        width:20px;
+        height:20px;
     }
 }
+

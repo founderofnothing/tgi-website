@@ -80,7 +80,7 @@ const Navbar = () => {
   {openDropdown === "management" && (
     <div className="nav_dropdown_menu">
       <div className="nav_dp_wrapper_container">
-      <NavLink className="dropdown_item">
+      <NavLink to="/managment/chairman" className="dropdown_item">
         <div className="menu_dp_cards">
           <h1 className='dp_title_text'>Chairman</h1>
           <div className="pfp_wrapper">
@@ -95,11 +95,11 @@ const Navbar = () => {
 
 
 
-        <NavLink className="dropdown_item">
+        <NavLink to="/managment/director" className="dropdown_item">
         <div className="menu_dp_cards">
           <h1 className='dp_title_text'>Director</h1>
           <div className="pfp_wrapper">
-            <h4 className='dp_pfp_text'>pandiyan</h4>
+            <h4 className='dp_pfp_text'> Judah</h4>
             <CaretDoubleRight className='dp_pfp_icons' />
           </div>
         </div>
