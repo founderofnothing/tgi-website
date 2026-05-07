@@ -26,6 +26,7 @@ margin:0px;
     margin: 0px;
     font-size:40px;
     font-family: poppins;
+    text-align: justify;
     font-weight: 500;
     color:#1F1E1E;
 }
@@ -63,7 +64,7 @@ margin:0px;
         font-family: poppins;
         font-weight: 500;
         color:#1F1E1E;
-        text-align:left;
+        /* text-align:left; */
 
     }
 }
@@ -96,7 +97,7 @@ margin:0px;
         font-family: poppins;
         font-weight: 500;
         color:#1F1E1E;
-        text-align:left;
+        /* text-align:left; */
 
     }
 }
@@ -127,7 +128,7 @@ margin:0px;
         font-family:poppins;
         font-weight: 500;
         color:#1F1E1E;
-        text-align:left;
+        /* text-align:left; */
 
     }
  
@@ -159,7 +160,7 @@ margin:0px;
         font-family:poppins;
         font-weight: 500;
         color:#1F1E1E;
-        text-align:left;
+        /* text-align:left; */
 
     }
  
@@ -192,7 +193,7 @@ margin:0px;
         font-family:poppins;
         font-weight: 500;
         color:#1F1E1E;
-        text-align:left;
+        /* text-align:left; */
 
     }
  
@@ -225,7 +226,7 @@ margin:0px;
         font-family:poppins;
         font-weight: 500;
         color:#1F1E1E;
-        text-align:left;
+        /* text-align:left; */
 
     }
 

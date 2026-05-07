@@ -51,6 +51,7 @@
 .ChairmanDetail_message_short_dis{
     font-family:poppins;
     font-weight:600;
+    text-align: justify;
     font-size:25px;
 }
 
@@ -60,6 +61,7 @@
 
 .ChairmanDetail_message_para{
     font-family:poppins;
+    text-align:justify;
     font-weight:500;
     color:#5c5c5c;
 

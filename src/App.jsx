@@ -11,6 +11,8 @@ import Home from "./pages/Home";
 import './app.css'
 import ChairmanManagment from "./pages/ChairmanManagment";
 import DirectorManagement from "./pages/DirectorManagement";
+import SecretaryManagment from "./pages/SecretaryManagment";
+import NursingInstitutionViewer from "./pages/NursingInstitutionViewer";
 function App() {
   return (
    <>
@@ -21,6 +23,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/managment/chairman" element={<ChairmanManagment />} />
           <Route path="/managment/director" element={<DirectorManagement />} />
+          <Route path="/managment/Secretary" element={<SecretaryManagment />} />
+
+
+          {/* instutions */}
+
+          <Route path="/Institutions/nursing" element={<NursingInstitutionViewer />} />
+
+
 
 
           <Route path="/tester" element={<Tester />} />

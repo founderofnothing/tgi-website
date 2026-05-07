@@ -106,11 +106,11 @@ const Navbar = () => {
         
         </NavLink>
 
-        <NavLink className="dropdown_item">
+        <NavLink to="/managment/Secretary" className="dropdown_item">
         <div className="menu_dp_cards">
           <h1 className='dp_title_text'>Secretary</h1>
           <div className="pfp_wrapper">
-            <h4 className='dp_pfp_text'>pandiyan</h4>
+            <h4 className='dp_pfp_text'>Hemalatha Pandiaraj</h4>
             <CaretDoubleRight className='dp_pfp_icons' />
           </div>
         </div>
@@ -143,8 +143,8 @@ const Navbar = () => {
 
       <div className="sec_nav_cards_wrapper">
           <NavLink className="dropdown_item"><h3 className='sec_nav_text_field'>College of Arts and Science for Women </h3></NavLink>
-      <NavLink className="dropdown_item"><h3  className='sec_nav_text_field'>College of Physiotherapy </h3></NavLink>
-      <NavLink className="dropdown_item"><h3  className='sec_nav_text_field'>college of Radiology and Imaging Technology</h3></NavLink>
+      <NavLink to="/Institutions/nursing" className="dropdown_item"><h3  className='sec_nav_text_field'>college of nursing</h3></NavLink>
+      <NavLink className="dropdown_item"><h3  className='sec_nav_text_field'>college of physiotherapy (co-edu) </h3></NavLink>
       <NavLink className="dropdown_item"><h3  className='sec_nav_text_field'>College of Education </h3>
 </NavLink>
 
