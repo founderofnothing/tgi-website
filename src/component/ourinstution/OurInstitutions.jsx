@@ -30,7 +30,7 @@ const OurInstitutions = () => {
           left: 0,
           behavior: "smooth",
         });
-      }, 9500);
+      }, 6500);
     };
   
     container.addEventListener("scroll", handleScroll);
@@ -94,7 +94,7 @@ const OurInstitutions = () => {
           left: 0, // 👈 scroll back to start
           behavior: 'smooth'
         });
-      }, 29500); // ⏱ delay (1.5 sec)
+      }, 6500); // ⏱ delay (1.5 sec)
     };
 
     container.addEventListener('scroll', handleScroll);

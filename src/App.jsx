@@ -13,6 +13,9 @@ import ChairmanManagment from "./pages/ChairmanManagment";
 import DirectorManagement from "./pages/DirectorManagement";
 import SecretaryManagment from "./pages/SecretaryManagment";
 import NursingInstitutionViewer from "./pages/NursingInstitutionViewer";
+import ArtsAndScienceViewer from "./pages/ArtsAndScienceViewer";
+import CollegeOfEducationViewer from "./pages/CollegeOfEducationViewer";
+import CollegeofPhysiotherapyViewer from "./pages/CollegeofPhysiotherapyViewer";
 function App() {
   return (
    <>
@@ -29,6 +32,11 @@ function App() {
           {/* instutions */}
 
           <Route path="/Institutions/nursing" element={<NursingInstitutionViewer />} />
+          <Route path="/Institutions/artsandscience" element={<ArtsAndScienceViewer />} />
+          <Route path="/Institutions/collegeofeducation" element={<CollegeOfEducationViewer />} />
+          <Route path="/Institutions/collegeofPhysiotherapy" element={<CollegeofPhysiotherapyViewer />} />
+
+
 
 
 

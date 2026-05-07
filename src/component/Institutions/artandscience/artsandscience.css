@@ -1,0 +1,222 @@
+.artsandscience_container{
+    width:99%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:40px;
+    margin-bottom: 80px;
+}
+
+.artsandscience_text_toptitle{
+    font-family: poppins;
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+
+.img_artsandscience_wrapper{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    height:400px;
+    background:#c0c0c0;
+    border-radius: 12px;
+}
+
+.img_artsandscience_container{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    border-radius: 12px;
+}
+
+
+/* text fields  */
+
+.artsandscience_text_wrapper{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top_artsandscience_tagline{
+    font-family: poppins;
+    font-weight:600;
+    font-size: 24px;
+}
+
+.top_artsandscience_para{
+    font-family: poppins;
+    font-weight:400;
+    font-size:17px;
+    color:#727272;
+    text-align: justify;
+}
+
+.top_artsandscience_prince_title{
+    font-family: poppins;
+    font-family:300;
+    font-size: 16px;
+}
+
+.top_artsandscience_sub_title{
+    font-family: poppins;
+    font-weight:500;
+    font-size:16px;
+}
+
+.artsandscience_exp_para{
+
+    font-family: poppins;
+    font-weight:400;
+    font-size:17px;
+    color:#727272;
+    text-align: justify;
+}
+
+
+/* course cards */
+
+.artsandscience_course_wrapper{
+    width:99%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.artsandscience_course_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right:20px;
+    outline:1px solid #c0c0c0;
+    border-radius:8px;
+}
+.artsandscience_course_card{
+display: flex;
+flex-direction:column;
+}
+
+.course_card_top{
+    width:95%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.artsandscience_course_title{
+    font-family: poppins;
+    font-weight:500;
+    font-size:18px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.ans_course_card_icons{
+    width:20px;
+    height:20px;
+}
+
+.course_reveal_para{
+    text-align: justify;
+    font-family:poppins;
+    font-size:16px;
+    font-weight:500;
+    color:#727272;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .img_artsandscience_wrapper{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        height:350px;
+        background:#c0c0c0;
+        border-radius: 12px;
+    }
+    
+    .img_artsandscience_container{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center center;
+        border-radius: 12px;
+    }
+
+.artsandscience_course_title{
+    font-family: poppins;
+    font-weight:500;
+    font-size:16px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+.course_reveal_para{
+    text-align: justify;
+    font-family:poppins;
+    font-size:16px;
+    font-weight:400;
+    color:#727272;
+
+}
+
+
+
+}
+
+@media(max-width:425px){
+
+
+    .img_artsandscience_wrapper{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        height:300px;
+        background:#c0c0c0;
+        border-radius: 12px;
+    }
+
+
+    .top_artsandscience_tagline{
+        font-size:18px;
+        text-align: justify;
+    }
+
+    .nrs_course_card_icons{
+        width:18px;
+        height:18px;
+    }
+
+    .artsandscience_course_title{
+        font-family: poppins;
+        font-weight:500;
+        font-size:14px;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    
+    
+    
+    .course_reveal_para{
+        text-align: justify;
+        font-family:poppins;
+        font-size:14px;
+        font-weight:400;
+        color:#727272;
+    
+    }
+    
+    
+    
+    }

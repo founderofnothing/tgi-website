@@ -142,10 +142,10 @@ const Navbar = () => {
     <div className="sec_nav_dropdown_menu">
 
       <div className="sec_nav_cards_wrapper">
-          <NavLink className="dropdown_item"><h3 className='sec_nav_text_field'>College of Arts and Science for Women </h3></NavLink>
+          <NavLink to ="/Institutions/artsandscience" className="dropdown_item"><h3 className='sec_nav_text_field'>College of Arts and Science for Women </h3></NavLink>
       <NavLink to="/Institutions/nursing" className="dropdown_item"><h3  className='sec_nav_text_field'>college of nursing</h3></NavLink>
-      <NavLink className="dropdown_item"><h3  className='sec_nav_text_field'>college of physiotherapy (co-edu) </h3></NavLink>
-      <NavLink className="dropdown_item"><h3  className='sec_nav_text_field'>College of Education </h3>
+      <NavLink to="/Institutions/collegeofPhysiotherapy" className="dropdown_item"><h3  className='sec_nav_text_field'>college of physiotherapy (co-edu) </h3></NavLink>
+      <NavLink to="/Institutions/collegeofeducation" className="dropdown_item"><h3  className='sec_nav_text_field'>College of Education </h3>
 </NavLink>
 
       </div>
