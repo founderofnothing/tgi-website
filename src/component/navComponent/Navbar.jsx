@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PhoneCall ,List ,X ,CaretDoubleRight} from "phosphor-react";
-import logo from '../../assets/tcaswlogo.svg';
+import logo from '../../assets/tgi_logo.svg';
 import { NavLink } from "react-router-dom";
 import './navbar.css';
 

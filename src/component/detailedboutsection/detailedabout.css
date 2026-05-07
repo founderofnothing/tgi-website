@@ -17,7 +17,14 @@
 }
 
 .DetailedAbout_text_field{
- font-size: 20px;
+ font-size:22px;
+ font-family:poppins;
+ font-weight:400;
+ color:#616161;
+ text-align: justify;
+ margin-bottom:60px;
+ margin-top:60px;
+
 }
 
 
@@ -94,21 +101,22 @@
 /* Parent must be relative */
 .DetailedAbout_mng_card {
     position: relative;
-    overflow: visible;
+    z-index: 1;
   }
   
   /* Hover card hidden by default */
   .hover_card {
     position: absolute;
-    top: -50px; /* adjust position */
-    left: 50%;
+    bottom:80%;
+    left: 70%;
     transform: translateX(-50%) translateY(10px);
     width:40%;
     background: #fff;
     color: #333;
-    padding: 10px 14px;
+    padding: 20px 20px;
     border-radius: 8px;
     font-size: 14px;
+    z-index:9999;
     
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   
@@ -152,7 +160,7 @@
 
 @media(max-width:768px){
     .DetailedAbout_container{
-        width:98%;
+        width:95%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -164,7 +172,7 @@
     }
 
     .DetailedAbout_mng_cards{
-        width:90%;
+        width:100%;
         margin-left: auto;
         margin-right: auto;
 
@@ -172,17 +180,40 @@
 
     .DetailedAbout_text_field{
         font-size: 18px;
-        margin-bottom:30px;
+        /* margin-bottom:30px; */
     }
 
     .DetailedAbout_mng_card{
         padding: 0px;
     }
 
+.DetailedAbout_container_header{
+    font-size:26px;
+}
+
+    .DetailedAbout_text_field{
+        font-size:18px;
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+
    
 }
 
-@media(max-width:460px){
+@media(max-width:425px){
+
+    .hover_card{
+        width:80%;
+        bottom:80%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+.DetailedAbout_text_field{
+    font-size:14px;
+}
+
+
 .mid_detailAbout_title_text{
     font-size: 16px;
     margin-bottom:5px;
@@ -200,7 +231,7 @@
 
 }
 
-@media(max-width:406px){
+/* @media(max-width:406px){
     .mid_detailAbout_title_text{
         font-size: 16px;
         margin-bottom:5px;
@@ -225,5 +256,39 @@
 
    }
     
+    } */
+
+
+@media(max-width:375px){
+    .lhs_DetailedAbout_mng_field{
+        column-gap:20px;
+    }
+    .mid_detailAbout_title_text{
+        font-size:14px;
     }
 
+    .hover_card{
+        width:80%;
+        bottom:80%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+}    
+
+@media(max-width:320px){
+
+    .hover_card{
+        width:80%;
+        bottom:80%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    .mid_detailAbout_title_text{
+font-size:12px;
+    }
+
+    .mid_detailAbout_title_para{
+        font-size:13px;
+    }
+}

@@ -7,8 +7,8 @@ import {CaretRight} from "phosphor-react";
 
 // img 
 import Secretary  from "../../assets/Secretary.jpeg";
-import Chairman  from "../../assets/director.jpg";
-import Director  from "../../assets/chairman.jpeg";
+import Director  from "../../assets/director.jpg";
+import  Chairman  from "../../assets/chairman.jpeg";
 
 
 
@@ -43,20 +43,34 @@ useEffect(() => {
       <h3 className='DetailedAbout_container_header'> about us</h3>
 
 <p className='DetailedAbout_text_field'>
-Thiravium College of Arts and Science for Women is dedicated to empowering young women through quality education. The college focuses on academic excellence, discipline, and overall personal development. It believes education is a powerful tool for growth and social change, helping students become responsible and confident individuals.
+Guided by the ideals of knowledge, discipline, and empowerment, Thiravium College of Arts and Science for Women strives to promote academic excellence and holistic development among young women. The institution firmly believes that education is a powerful tool for personal growth and social transformation. Through its commitment to quality higher education, the college aims to nurture responsible citizens who contribute meaningfully to society. 
+</p>
+
+<p className='DetailedAbout_text_field'>
+Since its establishment, Thiravium College of Arts and Science for Women, Kailasapatti, Theni, has been dedicated to empowering women through education. The institution has played a significant role in shaping the lives of many students by providing them with opportunities to develop intellectually, socially, and morally. By fostering a culture of discipline, dedication, and lifelong learning, the college continues to create graduates who are confident, skilled, and socially responsible. 
 </p>
 
 
-<p  className='DetailedAbout_text_field'>
+<p className='DetailedAbout_text_field'>
+The college emblem symbolizes the ideals and aspirations of the institution. It represents the pursuit of knowledge, integrity, and service to society. The elements in the emblem reflect the values of wisdom, enlightenment, and empowerment, which guide the academic and cultural life of the college. Through its emblem and motto, the institution reaffirms its commitment to nurturing educated women who will serve society with dignity and responsibility. 
 
- Since its establishment in Kailasapatti, Theni, the institution has supported women in building strong intellectual, social, and moral foundations. It creates a learning environment that encourages skill development, confidence, and lifelong learning.
+</p>
+
+{/* our inst */}
+
+<h3 className='DetailedAbout_container_header'> OUR INSTITUTIONS </h3>
+
+
+<p className='DetailedAbout_text_field'>
+Thiravium Group of Institutions is a trusted centre of learning with over 30 years of excellence in education. The group is committed to providing quality education across multiple disciplines, ensuring that students receive both knowledge and practical skills for their future. 
 
 </p>
 
-<p  className='DetailedAbout_text_field'>
- The college emblem represents knowledge, integrity, and service. It reflects the institution’s commitment to shaping educated women who contribute positively to society with dignity and responsibility.
-
+<p className='DetailedAbout_text_field'>
+Our institutions are designed to meet the needs of today’s world, offering opportunities for academic growth, professional development, and personal transformation. With experienced faculty, modern facilities, and a student-friendly environment, we guide learners to achieve their goals with confidence. 
 </p>
+
+
 
 <div className="DetailedAbout_managment_person_container">
   <div className="DetailedAbout_mng_cards">
@@ -79,6 +93,7 @@ Thiravium College of Arts and Science for Women is dedicated to empowering young
       <div className="hover_card">
     <p className='detailedabout_hover_textfield'> I strongly believe that, over the years, this institution will grow into a centre of excellence in knowledge and learning. It will not only serve the educational needs of students but also stand as 
 a pioneer in setting high academic standards across the state. </p>
+<p className='detailedabout_hover_textfield'> by Dr. T. Pandiaraj </p>
   </div>
     </div>
 
@@ -100,6 +115,7 @@ a pioneer in setting high academic standards across the state. </p>
       </div>
       <div className="hover_card">
     <p className='detailedabout_hover_textfield'> It gives me great joy to see our students succeed and proudly acknowledge the role of our institution in their achievements. Their growth and accomplishments inspire us to continue our journey with greater commitment and dedication.  </p>
+    <p className='detailedabout_hover_textfield'>by Dr. Hemalatha Pandiaraj </p>
   </div>
     </div>
 
@@ -120,6 +136,7 @@ a pioneer in setting high academic standards across the state. </p>
       </div>
       <div className="hover_card">
     <p className='detailedabout_hover_textfield'> We are dedicated to creating a learning environment that encourages curiosity, innovation, and excellence. Every student who joins us is guided to discover their potential and grow into a responsible and capable individual. </p>
+    <p className='detailedabout_hover_textfield'>Dr. P. Immanuel Judah </p>
   </div>
     </div>
 
