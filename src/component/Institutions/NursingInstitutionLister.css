@@ -2,6 +2,8 @@
     width:99%;
     margin-left: auto;
     margin-right: auto;
+    margin-top:40px;
+    margin-bottom: 80px;
 }
 
 .NursingInstitutionLister_text_toptitle{
@@ -122,5 +124,99 @@ flex-direction:column;
 
 .course_reveal_para{
     text-align: justify;
+    font-family:poppins;
+    font-size:16px;
+    font-weight:500;
+    color:#727272;
 
 }
+
+
+
+@media(max-width:768px){
+
+    .img_NursingInstitutionLister_wrapper{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        height:350px;
+        background:#c0c0c0;
+        border-radius: 12px;
+    }
+    
+    .img_NursingInstitutionLister_container{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center center;
+        border-radius: 12px;
+    }
+
+.NursingInstitutionLister_course_title{
+    font-family: poppins;
+    font-weight:500;
+    font-size:16px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+.course_reveal_para{
+    text-align: justify;
+    font-family:poppins;
+    font-size:16px;
+    font-weight:400;
+    color:#727272;
+
+}
+
+
+
+}
+
+@media(max-width:425px){
+
+
+    .img_NursingInstitutionLister_wrapper{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+        height:300px;
+        background:#c0c0c0;
+        border-radius: 12px;
+    }
+
+
+    .top_NursingInstitutionLister_tagline{
+        font-size:18px;
+        text-align: justify;
+    }
+
+    .nrs_course_card_icons{
+        width:18px;
+        height:18px;
+    }
+
+    .NursingInstitutionLister_course_title{
+        font-family: poppins;
+        font-weight:500;
+        font-size:14px;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    
+    
+    
+    .course_reveal_para{
+        text-align: justify;
+        font-family:poppins;
+        font-size:14px;
+        font-weight:400;
+        color:#727272;
+    
+    }
+    
+    
+    
+    }
