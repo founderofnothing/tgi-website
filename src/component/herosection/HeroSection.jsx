@@ -1,5 +1,5 @@
-import React from 'react'
-import { useEffect } from "react";
+// import React from 'react'
+import { useEffect ,useState } from "react";
 import gsap from "gsap";
 import { ArrowRight } from "phosphor-react";
 import './herosection.css'
@@ -10,6 +10,181 @@ import './herosection.css'
 
 
 const HeroSection = () => {
+
+  
+
+
+    // INSTITUTION API DATA
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [institutions, setInstitutions] = useState([]);
+
+    // COURSE LIST BASED ON SELECTED INSTITUTION
+    const [courses, setCourses] = useState([]);
+  
+    // LOADING STATE
+    const [loading, setLoading] = useState(true);
+
+
+
+    useEffect(() => {
+
+      if (isPopupOpen) {
+    
+        document.body.style.overflow = "hidden";
+    
+      } else {
+    
+        document.body.style.overflow = "auto";
+    
+      }
+    
+      return () => {
+        document.body.style.overflow = "auto";
+      };
+    
+    }, [isPopupOpen]);
+  
+    // FORM DATA
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      mobile: "",
+      state: "",
+      city: "",
+      institution: "",
+      course: "",
+    });
+  
+  
+  
+    // FETCH INSTITUTION + COURSE DATA
+    useEffect(() => {
+  
+      const fetchInstitutions = async () => {
+  
+        try {
+  
+          const response = await fetch(
+            "https://admin.thiraviumgroupofinstitution.com/wp-json/tgi/v1/institutions"
+          );
+  
+          const data = await response.json();
+  
+          setInstitutions(data);
+  
+        } catch (error) {
+  
+          console.log(error);
+  
+        } finally {
+  
+          setLoading(false);
+  
+        }
+      };
+  
+      fetchInstitutions();
+  
+    }, []);
+  
+  
+  
+  
+    // HANDLE INPUT CHANGE
+    const handleChange = (e) => {
+  
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+  
+    };
+  
+  
+  
+  
+    // HANDLE INSTITUTION CHANGE
+    const handleInstitutionChange = (e) => {
+  
+      const selectedInstitutionName = e.target.value;
+  
+      // UPDATE FORM
+      setFormData({
+        ...formData,
+        institution: selectedInstitutionName,
+        course: "",
+      });
+  
+      // FIND MATCHING INSTITUTION
+      const selectedInstitution = institutions.find(
+        (institution) =>
+          institution.institution_name === selectedInstitutionName
+      );
+  
+      // SET COURSES
+      if (selectedInstitution) {
+  
+        setCourses(selectedInstitution.courses);
+  
+      } else {
+  
+        setCourses([]);
+  
+      }
+  
+    };
+  
+  
+  
+  
+    // HANDLE FORM SUBMIT
+    const handleSubmit = async (e) => {
+  
+      e.preventDefault();
+  
+      try {
+  
+        const response = await fetch(
+          "https://admin.thiraviumgroupofinstitution.com/wp-json/tgi/v1/admission",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+  
+        const data = await response.json();
+  
+        console.log(data);
+  
+        if (data.success) {
+  
+          alert("Admission Submitted Successfully");
+  
+          // RESET FORM
+          setFormData({
+            name: "",
+            email: "",
+            mobile: "",
+            state: "",
+            city: "",
+            institution: "",
+            course: "",
+          });
+  
+          setCourses([]);
+  
+        }
+  
+      } catch (error) {
+  
+        console.log(error);
+  
+      }
+  
+    };
 
 
   useEffect(() => {
@@ -47,6 +222,158 @@ const HeroSection = () => {
 
 
 <div className="hero_section_container">
+
+{
+  isPopupOpen && (
+
+    <div
+      className="admission_popup_overlay"
+      onClick={() => setIsPopupOpen(false)}
+    >
+
+      <div
+        className="admission_form_container"
+        onClick={(e) => e.stopPropagation()}
+      >
+
+        <button
+          className="close_popup_btn"
+          onClick={() => setIsPopupOpen(false)}
+        >
+          ✕
+        </button>
+
+        <h1>Admission Form</h1>
+
+        <form className="admission_form_wrapper" onSubmit={handleSubmit}>
+
+          {/* NAME */}
+          <input
+            type="text"
+            name="name"
+            className="popup_text_area"
+            placeholder="Enter Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+
+          {/* EMAIL */}
+          <input
+            type="email"
+            name="email"
+            className="popup_text_area"
+            placeholder="Enter Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          {/* MOBILE */}
+          <input
+            type="text"
+            name="mobile"
+            className="popup_text_area"
+            placeholder="Enter Mobile Number"
+            value={formData.mobile}
+            onChange={handleChange}
+            required
+          />
+
+          {/* STATE */}
+          <input
+            type="text"
+            name="state"
+            className="popup_text_area"
+            placeholder="Enter State"
+            value={formData.state}
+            onChange={handleChange}
+          />
+
+          {/* CITY */}
+          <input
+            type="text"
+            name="city"
+            className="popup_text_area"
+            placeholder="Enter City"
+            value={formData.city}
+            onChange={handleChange}
+          />
+
+          {/* INSTITUTION */}
+          <select
+            value={formData.institution}
+            onChange={handleInstitutionChange}
+            required
+            className="popup_text_area"
+          >
+
+            <option value="">
+              Select Institution
+            </option>
+
+            {loading ? (
+
+              <option>
+                
+                Loading Institutions...
+              </option>
+
+            ) : (
+
+              institutions.map((institution) => (
+
+                <option
+                  key={institution.id}
+                  value={institution.institution_name}
+                >
+                  {institution.institution_name}
+                </option>
+
+              ))
+
+            )}
+
+          </select>
+
+          {/* COURSE */}
+          <select
+            name="course"
+            value={formData.course}
+            onChange={handleChange}
+            required
+            className="popup_text_area"
+          >
+
+            <option value="">
+              Select Course
+            </option>
+
+            {courses.map((course) => (
+
+              <option
+                key={course.id}
+                value={course.title}
+              >
+                {course.title}
+              </option>
+
+            ))}
+
+          </select>
+
+          <button type="submit">
+            Submit Admission
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  )
+}
 
 <div className="hero_section_text_wrapper">
        <div className="hero_section_main_wrapper">
@@ -154,7 +481,7 @@ const HeroSection = () => {
   </div>
 
   {/* CTA OUTSIDE */}
-  <div className="cta_wrapper">
+  {/* <div className="cta_wrapper">
     <div className="prm_cta_wrapper">
       <h2 className='prm_cta_text'>admission</h2>
     </div>
@@ -163,7 +490,19 @@ const HeroSection = () => {
 
     </div>
 
+  </div> */}
+  <div
+  className="cta_wrapper"
+  onClick={() => setIsPopupOpen(true)}
+>
+  <div className="prm_cta_wrapper">
+    <h2 className='prm_cta_text'>admission</h2>
   </div>
+
+  <div className="rhs_prm_cta_wrapper">
+    <ArrowRight className='prm_cta_icon' />
+  </div>
+</div>
 
 </div>
 
@@ -172,3 +511,142 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+
+
+// <div className="admission_form_container">
+
+// <h1>Admission Form</h1>
+
+// <form onSubmit={handleSubmit}>
+
+//   {/* NAME */}
+//   <input
+//     type="text"
+//     name="name"
+//     placeholder="Enter Name"
+//     value={formData.name}
+//     onChange={handleChange}
+//     required
+//   />
+
+
+
+//   {/* EMAIL */}
+//   <input
+//     type="email"
+//     name="email"
+//     placeholder="Enter Email"
+//     value={formData.email}
+//     onChange={handleChange}
+//     required
+//   />
+
+
+
+//   {/* MOBILE */}
+//   <input
+//     type="text"
+//     name="mobile"
+//     placeholder="Enter Mobile Number"
+//     value={formData.mobile}
+//     onChange={handleChange}
+//     required
+//   />
+
+
+
+//   {/* STATE */}
+//   <input
+//     type="text"
+//     name="state"
+//     placeholder="Enter State"
+//     value={formData.state}
+//     onChange={handleChange}
+//   />
+
+
+
+//   {/* CITY */}
+//   <input
+//     type="text"
+//     name="city"
+//     placeholder="Enter City"
+//     value={formData.city}
+//     onChange={handleChange}
+//   />
+
+
+
+//   {/* INSTITUTION SELECT */}
+//   <select
+//     value={formData.institution}
+//     onChange={handleInstitutionChange}
+//     required
+//   >
+
+//     <option value="">
+//       Select Institution
+//     </option>
+
+//     {loading ? (
+
+//       <option>
+//         Loading Institutions...
+//       </option>
+
+//     ) : (
+
+//       institutions.map((institution) => (
+
+//         <option
+//           key={institution.id}
+//           value={institution.institution_name}
+//         >
+//           {institution.institution_name}
+//         </option>
+
+//       ))
+
+//     )}
+
+//   </select>
+
+
+
+
+//   {/* COURSE SELECT */}
+//   <select
+//     name="course"
+//     value={formData.course}
+//     onChange={handleChange}
+//     required
+//   >
+
+//     <option value="">
+//       Select Course
+//     </option>
+
+//     {courses.map((course) => (
+
+//       <option
+//         key={course.id}
+//         value={course.title}
+//       >
+//         {course.title}
+//       </option>
+
+//     ))}
+
+//   </select>
+
+
+
+
+//   {/* SUBMIT BUTTON */}
+//   <button type="submit">
+//     Submit Admission
+//   </button>
+
+// </form>
+
+// </div>

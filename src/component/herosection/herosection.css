@@ -129,6 +129,194 @@ html, body {
 }
 
 
+
+
+
+
+
+.admission_popup_overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+
+  overflow-y: auto;
+
+  padding: 0;
+
+  height: 100dvh;
+}
+
+
+/* =========================
+POPUP CONTAINER
+========================= */
+
+.admission_form_container{
+  position: relative;
+
+  width: min(700px, 95%);
+
+  background: #fff;
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  max-height: 90dvh;
+
+  overflow-y: auto;
+
+  margin: auto;
+  animation: popupShow 0.35s ease;
+
+}
+
+
+
+
+/* POPUP OPEN ANIMATION */
+
+@keyframes popupShow{
+  from{
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+
+/* =========================
+TITLE
+========================= */
+
+.popup_form_title{
+  font-family: poppins;
+  font-size: 34px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+
+/* =========================
+FORM WRAPPER
+========================= */
+
+.admission_form_wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+/* =========================
+INPUTS + SELECT
+========================= */
+
+.popup_text_area{
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid #e7e7e7;
+  outline: none;
+  font-size: 16px;
+  font-family: poppins;
+  background: #fafafa;
+  transition: 0.25s ease;
+  box-sizing: border-box;
+}
+
+
+.popup_text_area:focus{
+  border: 1px solid #159461;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(21,148,97,0.08);
+}
+
+
+/* =========================
+SUBMIT BUTTON
+========================= */
+
+.submit_admission_btn{
+  border: none;
+  background: #159461;
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-family: poppins;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+.submit_admission_btn:hover{
+  transform: translateY(-2px);
+  background: #10774d;
+}
+
+
+/* =========================
+CLOSE BUTTON
+========================= */
+
+.close_popup_btn{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #f3f3f3;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+
+.close_popup_btn:hover{
+  background: #e7e7e7;
+  transform: rotate(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
  @media (max-width:1024px){
 
@@ -305,6 +493,21 @@ html, body {
      width:24px;
      height:24px;
  }
+
+ .admission_popup_overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  /* align-items:start; */
+  justify-content: center;
+  z-index: 9999;
+  padding:10px;
+  overflow-y: auto;
+  height:100vh;
+}
+
  
  
   }
@@ -315,6 +518,7 @@ html, body {
         margin-top:50px;
         margin-bottom:50px;
   overflow-x: hidden;
+  /* align-items: flex-end; */
 
     }
  .img_wrapper {
@@ -385,6 +589,28 @@ html, body {
   overflow-x: hidden;
 
     }
+
+    .admission_form_container{
+      position:relative;
+      top:-40px;
+    }
+
+
+    .admission_popup_overlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      display: flex;
+      /* align-items:start; */
+      justify-content: center;
+      z-index: 9999;
+      padding:10px;
+      overflow-y: auto;
+      height:100vh;
+    }
+  
+
 
     .img_wrapper {
         clip-path: url(#clipSmallMobile);
@@ -460,7 +686,43 @@ html, body {
      width:24px;
      height:24px;
  } */
- 
+ .admission_popup_overlay{
+  padding: 12px;
+}
+
+.admission_form_container{
+  width: 100%;
+  max-width: 100%;
+  border-radius: 22px 22px 0 0;
+  padding: 24px 18px;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.popup_form_title{
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.popup_text_area{
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.submit_admission_btn{
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+.close_popup_btn{
+  width: 38px;
+  height: 38px;
+  top: 14px;
+  right: 14px;
+  font-size: 18px;
+}
  
   }
 
@@ -471,6 +733,31 @@ html, body {
   overflow-x: hidden;
 
     }
+
+    .admission_form_container{
+      position:relative;
+      top:-30px;
+    }
+
+
+    .admission_popup_overlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      display: flex;
+      /* align-items:start; */
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+      overflow-y: auto;
+      height:100vh;
+    }
+  
+
+
+
+
     .hero_section_main_wrapper{
         width:97%;
         margin-left: auto;
@@ -536,7 +823,24 @@ html, body {
      color:#159461;
      border-radius: 60px;
      
+
  }
+
+
+ .popup_form_title{
+  font-size: 22px;
+}
+
+.popup_text_area{
+  font-size: 14px;
+}
+
+.submit_admission_btn{
+  font-size: 15px;
+}
+
+
+
   }
 
 
@@ -547,6 +851,24 @@ html, body {
   .hero_section_container{
     overflow-x: hidden;
   }
+  .admission_popup_overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+    display: flex;
+    /* align-items:start; */
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+    height:100vh;
+  }
+
+.admission_form_container{
+  position:relative;
+  top:-10px;
+}
 
     .cta_wrapper {
         position: absolute;
