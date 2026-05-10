@@ -188,36 +188,36 @@ const HeroSection = () => {
     };
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const tl = gsap.timeline();
+  //   const tl = gsap.timeline();
   
-    // 👉 Title (main animation)
-    tl.from(".hero_section_maintag", {
-      y: 40,
-      opacity: 0,
-      scale: 0.9,
-      duration: 1,
-      ease: "power3.out",
-    });
+  //   // 👉 Title (main animation)
+  //   tl.from(".hero_section_maintag", {
+  //     y: 40,
+  //     opacity: 0,
+  //     scale: 0.9,
+  //     duration: 1,
+  //     ease: "power3.out",
+  //   });
   
-    // 👉 Paragraph
-    tl.from(".herosection_para_field", {
-      y: 30,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-    }, "-=0.5"); // overlap for smooth feel
+  //   // 👉 Paragraph
+  //   tl.from(".herosection_para_field", {
+  //     y: 30,
+  //     opacity: 0,
+  //     duration: 0.8,
+  //     ease: "power3.out",
+  //   }, "-=0.5"); // overlap for smooth feel
   
-    // 👉 Image
-    tl.from(".img_wrapper", {
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-    }, "-=0.4");
+  //   // 👉 Image
+  //   tl.from(".img_wrapper", {
+  //     y: 40,
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power3.out",
+  //   }, "-=0.4");
   
-  }, []);
+  // }, []);
 
   return (
 
@@ -383,11 +383,23 @@ const HeroSection = () => {
       The goal of  <span className='herosection_maintag_hlg'> true education </span>is a holistic  development
        </h1>
 
-       </div>
-      <div className="hero_section_sec_main_wrapper">
        <p className='herosection_para_field'>We believe in balanced learning that blends knowledge, skills, ethics, and creativity.</p>
 
-      </div>
+
+       </div>
+      
+       <div
+  className="cta_wrapper"
+  onClick={() => setIsPopupOpen(true)}
+>
+<h2 className='prm_cta_text'>admission</h2>
+
+  
+
+  <div className="rhs_prm_cta_wrapper">
+    <ArrowRight className='prm_cta_icon' />
+  </div>
+</div>
       
 
        </div>
@@ -397,20 +409,18 @@ const HeroSection = () => {
 
   <div   className="img_wrapper"
   style={{
-    backgroundImage: `url(${herosectionimg})`,
+    // backgroundImage: `url(${herosectionimg})`,
   }}>
   <svg width="0" height="0">
 
 {/* <!-- Desktop --> */}
 <clipPath id="myClip" clipPathUnits="objectBoundingBox">
-  <path d="M 0 0 
-  L 1 0 
+  <path d="
+  M 0 0 
+  L 1 0
   L 1 1 
-  L 0.38 1 
-  Q 0.36 1 0.36 0.92 
-  Q 0.36 0.8 0.30 0.8 
-  L 0.34 0.8 
-  L 0 0.8
+  L 0 1
+  L 0 0
    Z"/>
 </clipPath>
 
@@ -435,15 +445,13 @@ const HeroSection = () => {
 <clipPath id="clipLargeMobile" clipPathUnits="objectBoundingBox">
   <path d="
   M 0 0
-  L 1 0
-  L 1 1
-  
-
-  L 0.42 1
-  Q 0.38 1 0.38 0.92
-  Q 0.38 0.86 0.34 0.83
-
-  L 0 0.83
+ L 1 0
+ L 1 1
+ L 0.35 1
+ L 0.34 0.98
+ L 0.34 0.89
+ L 0.33 0.88
+ L 0  0.88
 
   Z
   "/>
@@ -455,11 +463,12 @@ const HeroSection = () => {
   L 1 0
   L 1 1
 
-  L 0.72 1
-    Q 0.68 1 0.68 0.94
-    Q 0.68 0.88 0.62 0.85
-
-    L 0 0.85
+  L 0.45 1
+  L 0.43 0.98
+  L 0.43 0.89
+  L 0.40 0.87 
+  
+  L 0 0.87
   Z
   "/>
 </clipPath>
@@ -470,13 +479,12 @@ const HeroSection = () => {
   M 0 0
   L 1 0
   L 1 1
-
-  L 0.72 1
-    Q 0.68 1 0.68 0.93
-    Q 0.68 0.87 0.62 0.85
-
-    L 0 0.85
-
+ L 0.6 1
+ L 0.59 0.98
+ L 0.59 0.92
+ L 0.57 0.89
+ L 0.57 0.89
+ L 0 0.89
     Z
   "/>
 </clipPath>
@@ -495,18 +503,7 @@ const HeroSection = () => {
     </div>
 
   </div> */}
-  <div
-  className="cta_wrapper"
-  onClick={() => setIsPopupOpen(true)}
->
-  <div className="prm_cta_wrapper">
-    <h2 className='prm_cta_text'>admission</h2>
-  </div>
-
-  <div className="rhs_prm_cta_wrapper">
-    <ArrowRight className='prm_cta_icon' />
-  </div>
-</div>
+ 
 
 </div>
 
@@ -515,142 +512,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-
-
-// <div className="admission_form_container">
-
-// <h1>Admission Form</h1>
-
-// <form onSubmit={handleSubmit}>
-
-//   {/* NAME */}
-//   <input
-//     type="text"
-//     name="name"
-//     placeholder="Enter Name"
-//     value={formData.name}
-//     onChange={handleChange}
-//     required
-//   />
-
-
-
-//   {/* EMAIL */}
-//   <input
-//     type="email"
-//     name="email"
-//     placeholder="Enter Email"
-//     value={formData.email}
-//     onChange={handleChange}
-//     required
-//   />
-
-
-
-//   {/* MOBILE */}
-//   <input
-//     type="text"
-//     name="mobile"
-//     placeholder="Enter Mobile Number"
-//     value={formData.mobile}
-//     onChange={handleChange}
-//     required
-//   />
-
-
-
-//   {/* STATE */}
-//   <input
-//     type="text"
-//     name="state"
-//     placeholder="Enter State"
-//     value={formData.state}
-//     onChange={handleChange}
-//   />
-
-
-
-//   {/* CITY */}
-//   <input
-//     type="text"
-//     name="city"
-//     placeholder="Enter City"
-//     value={formData.city}
-//     onChange={handleChange}
-//   />
-
-
-
-//   {/* INSTITUTION SELECT */}
-//   <select
-//     value={formData.institution}
-//     onChange={handleInstitutionChange}
-//     required
-//   >
-
-//     <option value="">
-//       Select Institution
-//     </option>
-
-//     {loading ? (
-
-//       <option>
-//         Loading Institutions...
-//       </option>
-
-//     ) : (
-
-//       institutions.map((institution) => (
-
-//         <option
-//           key={institution.id}
-//           value={institution.institution_name}
-//         >
-//           {institution.institution_name}
-//         </option>
-
-//       ))
-
-//     )}
-
-//   </select>
-
-
-
-
-//   {/* COURSE SELECT */}
-//   <select
-//     name="course"
-//     value={formData.course}
-//     onChange={handleChange}
-//     required
-//   >
-
-//     <option value="">
-//       Select Course
-//     </option>
-
-//     {courses.map((course) => (
-
-//       <option
-//         key={course.id}
-//         value={course.title}
-//       >
-//         {course.title}
-//       </option>
-
-//     ))}
-
-//   </select>
-
-
-
-
-//   {/* SUBMIT BUTTON */}
-//   <button type="submit">
-//     Submit Admission
-//   </button>
-
-// </form>
-
-// </div>
