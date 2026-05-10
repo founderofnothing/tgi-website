@@ -73,12 +73,16 @@ html, body {
   }
 
   .img_wrapper {
-    width: 100%;
-    height: 100%;
-    background: rgb(177, 176, 176);
-    border-radius:15px;
-  
-    clip-path: url(#myClip);
+    width:100%;
+  height:100%;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border-radius: 12px;
+
+  clip-path: url(#myClip);
   }
 
 
@@ -128,7 +132,12 @@ html, body {
 }
 
 
-
+.add_form_title_text{
+  font-family: poppins;
+  text-align: center;
+  font-weight:500;
+  font-size:24px;
+}
 
 
 
@@ -294,6 +303,17 @@ CLOSE BUTTON
   transform: rotate(90deg);
 }
 
+.add_form_cta{
+  font-family: poppins;
+  font-weight:600;
+  font-size:18px;
+  text-align: center;
+  background:#159461;
+  padding: 10px 5px;
+  color:white;
+  border-radius: 8px;
+  
+}
 
 
 
@@ -589,6 +609,13 @@ CLOSE BUTTON
 
     }
 
+    .add_form_title_text{
+      font-family: poppins;
+      text-align: center;
+      font-weight:500;
+      font-size:20px;
+    }
+
     .admission_form_container{
       position:relative;
       top:-40px;
@@ -731,6 +758,13 @@ CLOSE BUTTON
     .hero_section_container{
   overflow-x: hidden;
 
+    }
+
+    .add_form_title_text{
+      font-family: poppins;
+      text-align: center;
+      font-weight:500;
+      font-size:18px;
     }
 
     .admission_form_container{

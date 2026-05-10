@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ArrowRight } from "phosphor-react";
 import './herosection.css'
 
+import herosectionimg from "../../assets/artsandscience.webp"
 
 
 
@@ -243,7 +244,7 @@ const HeroSection = () => {
           ✕
         </button>
 
-        <h1>Admission Form</h1>
+        <h1 className="add_form_title_text">Admission Form</h1>
 
         <form className="admission_form_wrapper" onSubmit={handleSubmit}>
 
@@ -362,9 +363,9 @@ const HeroSection = () => {
 
           </select>
 
-          <button type="submit">
+          <h3 className="add_form_cta" type="submit">
             Submit Admission
-          </button>
+          </h3>
 
         </form>
 
@@ -394,7 +395,10 @@ const HeroSection = () => {
 {/* NEW WRAPPER */}
 <div className="hero_visual_wrapper">
 
-  <div className="img_wrapper">
+  <div   className="img_wrapper"
+  style={{
+    backgroundImage: `url(${herosectionimg})`,
+  }}>
   <svg width="0" height="0">
 
 {/* <!-- Desktop --> */}

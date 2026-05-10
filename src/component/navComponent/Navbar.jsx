@@ -22,6 +22,12 @@ const Navbar = () => {
     }
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setLockedDropdown(null);
+    setOpenDropdown(null);
+  };
+
   // Close when clicking outside
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -59,15 +65,20 @@ const Navbar = () => {
         onClick={() => setIsMenuOpen(false)}
       />
     </div>
-      <NavLink to='/' className='menu_item'>
+      <NavLink   onClick={closeMenu}
+ to='/' className='menu_item'>
         <h3 className='menu_text_field'>home</h3>
       </NavLink>
 
-      <NavLink to="/about" className='menu_item'>
+      <NavLink
+        onClick={closeMenu}
+
+      to="/about" className='menu_item'>
         <h3 className='menu_text_field'>about</h3>
       </NavLink>
 
-      <NavLink  className='menu_item'>
+      <NavLink    
+ className='menu_item'>
       <div
   className="menu_dropdown_trigger"
   onMouseEnter={() => !lockedDropdown && setOpenDropdown("management")}
@@ -80,7 +91,8 @@ const Navbar = () => {
   {openDropdown === "management" && (
     <div className="nav_dropdown_menu">
       <div className="nav_dp_wrapper_container">
-      <NavLink to="/managment/chairman" className="dropdown_item">
+      <NavLink    onClick={closeMenu}
+ to="/managment/chairman" className="dropdown_item">
         <div className="menu_dp_cards">
           <h1 className='dp_title_text'>Chairman</h1>
           <div className="pfp_wrapper">
@@ -95,7 +107,8 @@ const Navbar = () => {
 
 
 
-        <NavLink to="/managment/director" className="dropdown_item">
+        <NavLink   onClick={closeMenu}
+ to="/managment/director" className="dropdown_item">
         <div className="menu_dp_cards">
           <h1 className='dp_title_text'>Director</h1>
           <div className="pfp_wrapper">
@@ -106,7 +119,8 @@ const Navbar = () => {
         
         </NavLink>
 
-        <NavLink to="/managment/Secretary" className="dropdown_item">
+        <NavLink   onClick={closeMenu}
+ to="/managment/Secretary" className="dropdown_item">
         <div className="menu_dp_cards">
           <h1 className='dp_title_text'>Secretary</h1>
           <div className="pfp_wrapper">
@@ -129,7 +143,8 @@ const Navbar = () => {
 </div>
       </NavLink>
 
-      <NavLink  className='menu_item'>
+      <NavLink  
+  className='menu_item'>
       <div
   className="menu_item"
   onMouseEnter={() => !lockedDropdown && setOpenDropdown("institutions")}
@@ -142,10 +157,20 @@ const Navbar = () => {
     <div className="sec_nav_dropdown_menu">
 
       <div className="sec_nav_cards_wrapper">
-          <NavLink to ="/Institutions/artsandscience" className="dropdown_item"><h3 className='sec_nav_text_field'>College of Arts and Science for Women </h3></NavLink>
-      <NavLink to="/Institutions/nursing" className="dropdown_item"><h3  className='sec_nav_text_field'>college of nursing</h3></NavLink>
-      <NavLink to="/Institutions/collegeofPhysiotherapy" className="dropdown_item"><h3  className='sec_nav_text_field'>college of physiotherapy (co-edu) </h3></NavLink>
-      <NavLink to="/Institutions/collegeofeducation" className="dropdown_item"><h3  className='sec_nav_text_field'>College of Education </h3>
+          <NavLink   onClick={closeMenu}
+ to ="/Institutions/artsandscience" className="dropdown_item"><h3 className='sec_nav_text_field'>College of Arts and Science for Women </h3></NavLink>
+      <NavLink
+        onClick={closeMenu}
+
+      to="/Institutions/nursing" className="dropdown_item"><h3  className='sec_nav_text_field'>college of nursing</h3></NavLink>
+      <NavLink 
+        onClick={closeMenu}
+
+      to="/Institutions/collegeofPhysiotherapy" className="dropdown_item"><h3  className='sec_nav_text_field'>college of physiotherapy (co-edu) </h3></NavLink>
+      <NavLink 
+        onClick={closeMenu}
+
+       to="/Institutions/collegeofeducation" className="dropdown_item"><h3  className='sec_nav_text_field'>College of Education </h3>
 </NavLink>
 
       </div>
@@ -156,11 +181,15 @@ const Navbar = () => {
 </div>
       </NavLink>
 
-      <NavLink  className='menu_item'>
+      <NavLink 
+        onClick={closeMenu}
+
+      className='menu_item'>
         <h3 className='menu_text_field'>courses</h3>
       </NavLink>
 
-      <NavLink  className='menu_item'>
+      <NavLink   onClick={closeMenu}
+ className='menu_item'>
         <h3 className='menu_text_field'>gallary</h3>
       </NavLink>
      </div>

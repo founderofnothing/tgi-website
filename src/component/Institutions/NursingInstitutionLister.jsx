@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './NursingInstitutionLister.css'
-import nursingcollege from "../../assets/nursingcollege.jpg";
+// import nursingcollege from "../../assets/nursingcollege.jpg";
+import nursingcollege from "../../assets/nursingcollege.webp";
 import { CaretDown } from "phosphor-react";
 
 
@@ -10,21 +11,21 @@ const NursingInstitutionLister = () => {
   const [openCard, setOpenCard] = useState(null)
 
   const courses = [
-    {
-      id: 1,
-      title: "B.Com CA",
-      desc: "We provide a strong foundation through academic learning and practical training."
-    },
-    {
-      id: 2,
-      title: "B.Sc Nursing",
-      desc: "Students are guided to develop professional skills and ethical values."
-    },
-    {
-      id: 3,
-      title: "BBA",
-      desc: "Nursing is not just a profession; it is a service to humanity. At our College of Nursing, we focus on developing both professional skills and a caring attitude among our students. We provide a strong foundation through academic learning and practical training. Our goal is to prepare students who can serve society with compassion, responsibility, and confidence. I encourage every student to take pride in this noble profession and give their best in learning and service. May you all grow into dedicated healthcare professionals."
-    }
+    // {
+    //   id: 1,
+    //   title: "B.Com CA",
+    //   desc: "We provide a strong foundation through academic learning and practical training."
+    // },
+    // {
+    //   id: 2,
+    //   title: "B.Sc Nursing",
+    //   desc: "Students are guided to develop professional skills and ethical values."
+    // },
+    // {
+    //   id: 3,
+    //   title: "BBA",
+    //   desc: "Nursing is not just a profession; it is a service to humanity. At our College of Nursing, we focus on developing both professional skills and a caring attitude among our students. We provide a strong foundation through academic learning and practical training. Our goal is to prepare students who can serve society with compassion, responsibility, and confidence. I encourage every student to take pride in this noble profession and give their best in learning and service. May you all grow into dedicated healthcare professionals."
+    // }
   ]
 
   const handleCardToggle = (id) => {

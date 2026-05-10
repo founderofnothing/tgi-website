@@ -4,11 +4,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "phosphor-react";
 
-// img import
-import imgone from "../../assets/artsandscience.jpeg";
-import imgtwo from '../../assets/Physiotherapycollege.jpg'
-import imgfour from '../../assets/nursingcollege.jpg'
-import imgthree from '../../assets/collegeofeducation.jpg'
+
+
+import imgone from '../../assets/artsandscience.webp';
+import imgtwo from '../../assets/Physiotherapycollege.webp';
+import imgfour from '../../assets/nursingcollege.webp';
+import imgthree from '../../assets/collegeofeducation.webp';
 
 import './ourinstitution.css'
 const OurInstitutions = () => {

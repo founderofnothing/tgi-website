@@ -6,11 +6,11 @@ import './detailedabout.css'
 import {CaretRight} from "phosphor-react";
 
 // img 
-import Secretary  from "../../assets/Secretary.jpeg";
-import Director  from "../../assets/director.jpg";
-import  Chairman  from "../../assets/chairman.jpeg";
 
 
+import Secretary from"../../assets/Secretary.webp";
+import Director  from"../../assets/Director.jpg";
+import Chairman from "../../assets/chairman.webp"
 
 
 

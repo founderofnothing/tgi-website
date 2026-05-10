@@ -1,6 +1,6 @@
 import React from 'react'
 import './chairmandetail.css'
-import chairman from "../../../assets/chairman.jpeg";
+import chairman from "../../../assets/chairman.webp"
 const ChairmanDetail = () => {
   return (
     <div className='ChairmanDetail_container'>

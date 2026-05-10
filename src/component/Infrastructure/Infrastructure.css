@@ -118,6 +118,10 @@
         width:60%;
         margin-right: auto;
     }
+
+    .Infrastructure_title_para{
+        margin-bottom:80px;
+    }
 }
 
 @media(max-width:425px){
@@ -131,6 +135,10 @@
         font-size:17px;
         font-weight:600;
 
+    }
+
+    .Infrastructure_title_para{
+        margin-bottom:60px;
     }
 
     .top_Infrastructure_wrapper{

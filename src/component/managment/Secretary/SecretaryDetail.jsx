@@ -1,8 +1,8 @@
 import React from 'react'
 import './Secretarydetail.css'
 
-import Secretary from "../../../assets/Secretary.jpeg";
-// import Secretary from '../../../assets/Secretary'
+
+import Secretary from '../../../assets/Secretary.webp'
 
 const SecretaryDetail = () => {
   return (
